@@ -1,0 +1,449 @@
+/* =====================================
+   SRI VENKATESWARA COLLEGE
+   DEPARTMENT OF ECONOMICS
+   Light Background + Dark Text Theme
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f9fc;
+    color: #263445;
+    line-height: 1.7;
+}
+
+/* COLLEGE HEADER */
+
+header {
+    background: #f4f7f5;
+    color: #172b3a;
+    text-align: center;
+    padding: 35px 15px;
+    border-bottom: 4px solid #159b91;
+}
+
+header h1 {
+    color: #142b3b;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    color: #203c50;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+header p {
+    color: #4a5c6c;
+    font-size: 15px;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    background: #173b4d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #159b91;
+    color: #ffffff;
+}
+
+/* DROPDOWN */
+
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+nav .dropdown-content a {
+    color: #203447;
+    padding: 12px 16px;
+}
+
+nav .dropdown-content a:hover {
+    background: #e4f3f0;
+    color: #087f78;
+}
+
+nav .dropdown:hover .dropdown-content,
+nav .dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 430px;
+    background:
+        linear-gradient(120deg,
+        rgba(23,59,77,0.86),
+        rgba(21,155,145,0.76)),
+        url("images/economics.jpg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: #ffffff;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: clamp(35px, 6vw, 55px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #ffffff;
+    font-size: 19px;
+    max-width: 750px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 65px 8%;
+}
+
+section h2 {
+    text-align: center;
+    color: #172f43;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: #159b91;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+section h3 {
+    color: #203b50;
+}
+
+section p {
+    color: #455668;
+    font-size: 16px;
+}
+
+/* ABOUT */
+
+#about {
+    background: #ffffff;
+    text-align: center;
+}
+
+#about p {
+    max-width: 950px;
+    margin: auto;
+}
+
+/* STATISTICS */
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.stat-box {
+    background: #edf5f3;
+    padding: 25px;
+    min-width: 180px;
+    border-radius: 14px;
+    border-bottom: 4px solid #159b91;
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(21,155,145,0.15);
+}
+
+.stat-box h3 {
+    color: #173b4d;
+    font-size: 27px;
+}
+
+.stat-box p {
+    color: #455668;
+}
+
+/* FACULTY AND COURSE CARDS */
+
+.card-container,
+#faculty .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(24,50,70,0.07);
+    border: 1px solid #e3e9ee;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 15px 30px rgba(21,155,145,0.15);
+    border-color: #159b91;
+}
+
+.card h3 {
+    color: #173b4d;
+    margin: 12px 0 6px;
+}
+
+.card p {
+    color: #526174;
+}
+
+/* FACULTY AVATARS */
+
+.faculty-avatar {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #159b91, #5267a8);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* TAGS */
+
+.tag {
+    display: inline-block;
+    background: #e5f3f1;
+    color: #126d68;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+/* TABLES */
+
+.table-container {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    margin: 25px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 550px;
+}
+
+th {
+    background: #173b4d;
+    color: #ffffff;
+    padding: 16px;
+    text-align: left;
+}
+
+td {
+    padding: 14px 16px;
+    color: #35485a;
+    border-bottom: 1px solid #e5edf1;
+}
+
+tr:nth-child(even) {
+    background: #f0f6f7;
+}
+
+tr:hover {
+    background: #e1f1ef;
+}
+
+/* ACTIVITIES */
+
+#activities {
+    background: #f0f5f8;
+}
+
+#activities .card {
+    border-top: 4px solid #159b91;
+}
+
+/* CONTACT */
+
+#contact {
+    background: #ffffff;
+}
+
+.contact-card {
+    background: #edf5f3;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #d8e9e6;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+    color: #173b4d;
+}
+
+/* BUTTONS */
+
+button,
+.btn {
+    display: inline-block;
+    background: #087f78;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    background: #173b4d;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer {
+    background: #173b4d;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    color: #edf5f3;
+}
+
+/* ANIMATION */
+
+.card,
+.stat-box,
+.contact-card {
+    transition: all 0.3s ease;
+}
+
+::selection {
+    background: #159b91;
+    color: #ffffff;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 900px) {
+    .card-container,
+    #faculty .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav a {
+        padding: 11px 12px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    .card-container,
+    #faculty .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 350px;
+    }
+}
